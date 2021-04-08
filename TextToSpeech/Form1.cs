@@ -25,11 +25,11 @@ namespace TextToSpeech
         {
             if (langs.SelectedIndex < 0)
             {
+                MessageBox.Show("You need to select a language...", "No language", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             synthesizer.SpeakAsyncCancelAll();
             synthesizer.SelectVoice(langs.SelectedItem.ToString());
-            //synthesizer.SelectVoice("Microsoft Asaf Desktop");
             synthesizer.Rate = speedSlider.Value;
 
             string toSpeak = "";
@@ -37,6 +37,11 @@ namespace TextToSpeech
                 toSpeak = inputArea.SelectedText;
             else
                 toSpeak = inputArea.Text;
+            if (toSpeak.Length <= 0)
+            {
+                MessageBox.Show("You need write some text...", "No text", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             synthesizer.SpeakAsync(toSpeak);
             
         }
@@ -47,7 +52,6 @@ namespace TextToSpeech
             this.Text = Properties.Resources.ENG_form1_txt;
             speedLabelText.Text = Properties.Resources.ENG_speedLabel_txt + ":" ;
 
-            //SpeechSynthesizer synthesizer = new SpeechSynthesizer();
             synthesizer = new SpeechSynthesizer();
             synthesizer.SetOutputToDefaultAudioDevice();
             synthesizer.Volume = 100;
@@ -55,7 +59,6 @@ namespace TextToSpeech
             {
                 var info = voice.VoiceInfo;
                 langs.Items.Add(info.Name);
-                //inputArea.Text += info.Name + "\n";
             }
         }
 
