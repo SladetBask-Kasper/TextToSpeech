@@ -79,6 +79,15 @@ namespace TextToSpeech.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Always on top.
+        /// </summary>
+        internal static string ENG_onTop_text {
+            get {
+                return ResourceManager.GetString("ENG_onTop_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Speed.
         /// </summary>
         internal static string ENG_speedLabel_txt {

@@ -123,6 +123,9 @@
   <data name="ENG_form1_txt" xml:space="preserve">
     <value>Text2Speech</value>
   </data>
+  <data name="ENG_onTop_text" xml:space="preserve">
+    <value>Always on top</value>
+  </data>
   <data name="ENG_speedLabel_txt" xml:space="preserve">
     <value>Speed</value>
   </data>

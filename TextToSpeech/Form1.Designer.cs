@@ -36,6 +36,7 @@ namespace TextToSpeech
             this.speedSlider = new System.Windows.Forms.TrackBar();
             this.speedLabel = new System.Windows.Forms.Label();
             this.speedLabelText = new System.Windows.Forms.Label();
+            this.onTop = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,11 +107,23 @@ namespace TextToSpeech
             this.speedLabelText.TabIndex = 5;
             this.speedLabelText.Text = "Speed";
             // 
+            // onTop
+            // 
+            this.onTop.AutoSize = true;
+            this.onTop.Location = new System.Drawing.Point(225, 455);
+            this.onTop.Name = "onTop";
+            this.onTop.Size = new System.Drawing.Size(80, 17);
+            this.onTop.TabIndex = 6;
+            this.onTop.Text = "checkBox1";
+            this.onTop.UseVisualStyleBackColor = true;
+            this.onTop.CheckedChanged += new System.EventHandler(this.onTop_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 492);
+            this.Controls.Add(this.onTop);
             this.Controls.Add(this.speedLabelText);
             this.Controls.Add(this.speedLabel);
             this.Controls.Add(this.speedSlider);
@@ -135,6 +148,7 @@ namespace TextToSpeech
         private System.Windows.Forms.TrackBar speedSlider;
         private System.Windows.Forms.Label speedLabel;
         private System.Windows.Forms.Label speedLabelText;
+        private System.Windows.Forms.CheckBox onTop;
     }
 }
 

@@ -51,6 +51,7 @@ namespace TextToSpeech
             bSpeak.Text = Properties.Resources.ENG_bSpeak_txt;
             this.Text = Properties.Resources.ENG_form1_txt;
             speedLabelText.Text = Properties.Resources.ENG_speedLabel_txt + ":" ;
+            onTop.Text = Properties.Resources.ENG_onTop_text;
 
             synthesizer = new SpeechSynthesizer();
             synthesizer.SetOutputToDefaultAudioDevice();
@@ -65,6 +66,11 @@ namespace TextToSpeech
         private void speedSlider_Scroll(object sender, EventArgs e)
         {
             speedLabel.Text = speedSlider.Value.ToString();
+        }
+
+        private void onTop_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = onTop.Checked;
         }
     }
 }
