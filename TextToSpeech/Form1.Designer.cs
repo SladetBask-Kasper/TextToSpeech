@@ -62,13 +62,13 @@ namespace TextToSpeech
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelSpeechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiếngViệtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.araToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suomalainenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.հայերենToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.српскиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelSpeechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -356,19 +356,6 @@ namespace TextToSpeech
             this.toolStripMenuItem13.Text = "Deutsche";
             this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
             // 
-            // fontToolStripMenuItem
-            // 
-            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.fontToolStripMenuItem.Text = "Font";
-            // 
-            // cancelSpeechToolStripMenuItem
-            // 
-            this.cancelSpeechToolStripMenuItem.Name = "cancelSpeechToolStripMenuItem";
-            this.cancelSpeechToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.cancelSpeechToolStripMenuItem.Text = "Cancel Speech";
-            this.cancelSpeechToolStripMenuItem.Click += new System.EventHandler(this.cancelSpeechToolStripMenuItem_Click);
-            // 
             // tiếngViệtToolStripMenuItem
             // 
             this.tiếngViệtToolStripMenuItem.Name = "tiếngViệtToolStripMenuItem";
@@ -403,6 +390,20 @@ namespace TextToSpeech
             this.српскиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.српскиToolStripMenuItem.Text = "Српски";
             this.српскиToolStripMenuItem.Click += new System.EventHandler(this.српскиToolStripMenuItem_Click);
+            // 
+            // fontToolStripMenuItem
+            // 
+            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
+            // 
+            // cancelSpeechToolStripMenuItem
+            // 
+            this.cancelSpeechToolStripMenuItem.Name = "cancelSpeechToolStripMenuItem";
+            this.cancelSpeechToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.cancelSpeechToolStripMenuItem.Text = "Cancel Speech";
+            this.cancelSpeechToolStripMenuItem.Click += new System.EventHandler(this.cancelSpeechToolStripMenuItem_Click);
             // 
             // Form1
             // 

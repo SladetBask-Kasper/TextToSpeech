@@ -23,6 +23,7 @@ namespace TextToSpeech
         }
 
         private SpeechSynthesizer synthesizer;
+        private FontDialog fontDialog1;
         private bool isOnTop = false;
         private string path = "";
         public static ResourceManager rm;
@@ -245,6 +246,20 @@ namespace TextToSpeech
         {
             Properties.Settings.Default.Lang = "ser";
             this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1 = new FontDialog();
+            fontDialog1.ShowColor = false;
+            fontDialog1.ShowApply = false;
+            fontDialog1.ShowEffects = false;
+            fontDialog1.ShowHelp = false;
+            fontDialog1.Font = inputArea.Font;
+            if (fontDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                inputArea.Font = fontDialog1.Font;
+            }
         }
     }
 }
