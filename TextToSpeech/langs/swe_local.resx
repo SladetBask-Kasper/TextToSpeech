@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CancelSpeech" xml:space="preserve">
+    <value>Avbryt uttalet</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Arkiv</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Typsnitt</value>
+  </data>
+  <data name="Form1_txt" xml:space="preserve">
+    <value>Text till tal</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>Språk</value>
+  </data>
+  <data name="NewFile" xml:space="preserve">
+    <value>Ny Fil</value>
+  </data>
+  <data name="OnTop_txt" xml:space="preserve">
+    <value>Alltid överst</value>
+  </data>
+  <data name="OpenFile" xml:space="preserve">
+    <value>Öppna Fil</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Spara Som</value>
+  </data>
+  <data name="SaveFile" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Inställningar</value>
+  </data>
+  <data name="Speak_txt" xml:space="preserve">
+    <value>Uttala</value>
+  </data>
+  <data name="SpeedLabel_txt" xml:space="preserve">
+    <value>Hastighet</value>
+  </data>
+  <data name="Trans" xml:space="preserve">
+    <value>Genomskinlighet</value>
+  </data>
 </root>

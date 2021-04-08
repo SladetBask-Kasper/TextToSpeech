@@ -23,12 +23,15 @@ namespace TextToSpeech.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string a {
+        [global::System.Configuration.DefaultSettingValueAttribute("eng")]
+        public string Lang {
             get {
-                return ((string)(this["a"]));
+                return ((string)(this["Lang"]));
+            }
+            set {
+                this["Lang"] = value;
             }
         }
     }

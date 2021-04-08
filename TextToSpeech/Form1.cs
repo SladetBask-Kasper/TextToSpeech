@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech;
 using System.Speech.Synthesis;
+using System.IO;
+using System.Resources;
+using System.Reflection;
 
 namespace TextToSpeech
 {
@@ -19,7 +22,10 @@ namespace TextToSpeech
             InitializeComponent();
         }
 
-        public SpeechSynthesizer synthesizer;
+        private SpeechSynthesizer synthesizer;
+        private bool isOnTop = false;
+        private string path = "";
+        public static ResourceManager rm;
 
         private void bSpeak_Click(object sender, EventArgs e)
         {
@@ -43,15 +49,11 @@ namespace TextToSpeech
                 return;
             }
             synthesizer.SpeakAsync(toSpeak);
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            bSpeak.Text = Properties.Resources.ENG_bSpeak_txt;
-            this.Text = Properties.Resources.ENG_form1_txt;
-            speedLabelText.Text = Properties.Resources.ENG_speedLabel_txt + ":" ;
-            onTop.Text = Properties.Resources.ENG_onTop_text;
+            this.loadLang(Properties.Settings.Default.Lang);
 
             synthesizer = new SpeechSynthesizer();
             synthesizer.SetOutputToDefaultAudioDevice();
@@ -68,9 +70,181 @@ namespace TextToSpeech
             speedLabel.Text = speedSlider.Value.ToString();
         }
 
-        private void onTop_CheckedChanged(object sender, EventArgs e)
+        private void cancelSpeechToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.TopMost = onTop.Checked;
+            synthesizer.SpeakAsyncCancelAll();
+        }
+        private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            isOnTop = !isOnTop;
+            this.TopMost = isOnTop;
+        }
+
+        private void newFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var info = new System.Diagnostics.ProcessStartInfo(Application.ExecutablePath);
+            System.Diagnostics.Process.Start(info);
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e){this.Opacity = 0.1;}
+        private void toolStripMenuItem2_Click(object sender, EventArgs e){this.Opacity = 1.0;}
+        private void toolStripMenuItem3_Click(object sender, EventArgs e){this.Opacity = 0.9;}
+        private void toolStripMenuItem4_Click(object sender, EventArgs e){this.Opacity = 0.8;}
+        private void toolStripMenuItem5_Click(object sender, EventArgs e){this.Opacity = 0.7;}
+        private void toolStripMenuItem6_Click(object sender, EventArgs e){this.Opacity = 0.6;}
+        private void toolStripMenuItem7_Click(object sender, EventArgs e){this.Opacity = 0.5;}
+        private void toolStripMenuItem8_Click(object sender, EventArgs e){this.Opacity = 0.4;}
+        private void toolStripMenuItem9_Click(object sender, EventArgs e){this.Opacity = 0.3;}
+        private void toolStripMenuItem10_Click(object sender, EventArgs e){this.Opacity = 0.2;}
+
+
+        private void saveInputArea(bool reUse)
+        {
+            if (reUse == true)
+            {
+                if (path.Length > 0)
+                {
+                    inputArea.SaveFile(path, RichTextBoxStreamType.PlainText);
+                }
+                else
+                {
+                    saveInputArea(false);
+                }
+            }
+            else
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                saveFileDialog1.Title = "Save a Text File";
+                var res = saveFileDialog1.ShowDialog();
+
+                if (saveFileDialog1.FileName != "" && res == DialogResult.OK)
+                {
+                    FileStream fs = (FileStream)saveFileDialog1.OpenFile();
+                    path = fs.Name;
+                    fs.Close();
+
+                    switch (saveFileDialog1.FilterIndex)
+                    {
+                        case 1:
+                            inputArea.SaveFile(path, RichTextBoxStreamType.PlainText);
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveInputArea(true);
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveInputArea(false);
+        }
+
+        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    path = openFileDialog.FileName;
+                }
+            }
+            inputArea.LoadFile(path, RichTextBoxStreamType.PlainText);
+        }
+        private void loadLang(string lang)
+        {
+            rm = new ResourceManager("TextToSpeech.langs."+lang+"_local", Assembly.GetExecutingAssembly());
+
+            bSpeak.Text = rm.GetString("Speak_txt");
+            this.Text = rm.GetString("Form1_txt");
+            speedLabelText.Text = rm.GetString("SpeedLabel_txt") + ":";
+            cancelSpeechToolStripMenuItem.Text = rm.GetString("CancelSpeech");
+            alwaysOnTopToolStripMenuItem.Text = rm.GetString("OnTop_txt");
+            newFileToolStripMenuItem.Text = rm.GetString("NewFile");
+            saveFileToolStripMenuItem.Text = rm.GetString("SaveFile");
+            saveAsToolStripMenuItem.Text = rm.GetString("SaveAs");
+            openFileToolStripMenuItem.Text = rm.GetString("OpenFile");
+            transparencyToolStripMenuItem.Text = rm.GetString("Trans");
+            settingsToolStripMenuItem.Text = rm.GetString("Settings");
+            arkivToolStripMenuItem.Text = rm.GetString("File");
+            fontToolStripMenuItem.Text = rm.GetString("Font");
+            languageToolStripMenuItem.Text = rm.GetString("Lang");
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
+
+        private void swedishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "swe";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "eng";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void 中国ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "man";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "ire";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "ivr";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "ger";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void tiếngViệtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "vie";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void araToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "arb";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void suomalainenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "suo";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void հայերենToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "arm";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
+
+        private void српскиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "ser";
+            this.loadLang(Properties.Settings.Default.Lang);
         }
     }
 }

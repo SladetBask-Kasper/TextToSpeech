@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CancelSpeech" xml:space="preserve">
+    <value>Hủy lời nói</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Tập tin</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Nét chữ</value>
+  </data>
+  <data name="Form1_txt" xml:space="preserve">
+    <value>Chuyển văn bản thành giọng nói</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="NewFile" xml:space="preserve">
+    <value>tập tin mới</value>
+  </data>
+  <data name="OnTop_txt" xml:space="preserve">
+    <value>Luôn luôn trên đầu trang</value>
+  </data>
+  <data name="OpenFile" xml:space="preserve">
+    <value>Mở tệp</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Lưu thành</value>
+  </data>
+  <data name="SaveFile" xml:space="preserve">
+    <value>Tiết kiệm</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="Speak_txt" xml:space="preserve">
+    <value>Nói</value>
+  </data>
+  <data name="SpeedLabel_txt" xml:space="preserve">
+    <value>Tốc độ</value>
+  </data>
+  <data name="Trans" xml:space="preserve">
+    <value>Minh bạch</value>
+  </data>
 </root>

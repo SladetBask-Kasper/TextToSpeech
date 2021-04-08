@@ -65,16 +65,111 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="langs\arb_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arb_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\arm_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arm_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\eng_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eng_local.resx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="langs\ger_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ger_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\ire_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ire_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\ivr_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ivr_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\man_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>man_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\ser_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ser_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\suo_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suo_local.resx</DependentUpon>
+    </Compile>
+    <Compile Include="langs\vie_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vie_local.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="langs\swe_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>swe_local.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="langs\arb_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>arb_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\arm_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>arm_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\eng_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>eng_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\ger_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ger_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\ire_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ire_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\ivr_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ivr_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\man_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>man_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\ser_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ser_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\suo_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>suo_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\vie_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>vie_local.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +181,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="langs\swe_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>swe_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

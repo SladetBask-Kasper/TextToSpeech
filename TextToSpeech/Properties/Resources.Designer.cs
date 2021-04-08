@@ -59,41 +59,5 @@ namespace TextToSpeech.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Speak.
-        /// </summary>
-        internal static string ENG_bSpeak_txt {
-            get {
-                return ResourceManager.GetString("ENG_bSpeak_txt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Text2Speech.
-        /// </summary>
-        internal static string ENG_form1_txt {
-            get {
-                return ResourceManager.GetString("ENG_form1_txt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Always on top.
-        /// </summary>
-        internal static string ENG_onTop_text {
-            get {
-                return ResourceManager.GetString("ENG_onTop_text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Speed.
-        /// </summary>
-        internal static string ENG_speedLabel_txt {
-            get {
-                return ResourceManager.GetString("ENG_speedLabel_txt", resourceCulture);
-            }
-        }
     }
 }
