@@ -120,8 +120,14 @@
   <data name="CancelSpeech" xml:space="preserve">
     <value>Peruuta puhe</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Muokata</value>
+  </data>
   <data name="File" xml:space="preserve">
     <value>Tiedosto</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Löytö</value>
   </data>
   <data name="Font" xml:space="preserve">
     <value>Fontti</value>
@@ -129,8 +135,14 @@
   <data name="Form1_txt" xml:space="preserve">
     <value>Teksti puheeksi</value>
   </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Avainsana</value>
+  </data>
   <data name="Lang" xml:space="preserve">
     <value>Kieli</value>
+  </data>
+  <data name="MatchC" xml:space="preserve">
+    <value>Tapauskohtainen</value>
   </data>
   <data name="NewFile" xml:space="preserve">
     <value>Uusi tiedosto</value>
@@ -140,6 +152,12 @@
   </data>
   <data name="OpenFile" xml:space="preserve">
     <value>Avaa tiedosto</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Korvata</value>
+  </data>
+  <data name="ReplaceWith" xml:space="preserve">
+    <value>Korvata</value>
   </data>
   <data name="SaveAs" xml:space="preserve">
     <value>Tallenna nimellä</value>

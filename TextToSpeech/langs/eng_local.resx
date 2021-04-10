@@ -120,8 +120,14 @@
   <data name="CancelSpeech" xml:space="preserve">
     <value>Cancel Speech</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
   <data name="File" xml:space="preserve">
     <value>File</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Find</value>
   </data>
   <data name="Font" xml:space="preserve">
     <value>Font</value>
@@ -129,8 +135,14 @@
   <data name="Form1_txt" xml:space="preserve">
     <value>Text2Speech</value>
   </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
   <data name="Lang" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="MatchC" xml:space="preserve">
+    <value>Match Case</value>
   </data>
   <data name="NewFile" xml:space="preserve">
     <value>New File</value>
@@ -140,6 +152,12 @@
   </data>
   <data name="OpenFile" xml:space="preserve">
     <value>Open File</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="ReplaceWith" xml:space="preserve">
+    <value>Replace With</value>
   </data>
   <data name="SaveAs" xml:space="preserve">
     <value>Save As</value>

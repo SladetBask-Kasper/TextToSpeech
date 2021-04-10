@@ -12,6 +12,8 @@ using System.Speech.Synthesis;
 using System.IO;
 using System.Resources;
 using System.Reflection;
+using System.Net;
+using System.Text.RegularExpressions;
 
 namespace TextToSpeech
 {
@@ -26,7 +28,18 @@ namespace TextToSpeech
         private FontDialog fontDialog1;
         private bool isOnTop = false;
         private string path = "";
+        public FindReplace wFind;
         public static ResourceManager rm;
+
+        private string getTxt()
+        {
+            string rv = "";
+            if (inputArea.SelectedText.Length > 0)
+                rv = inputArea.SelectedText;
+            else
+                rv = inputArea.Text;
+            return rv;
+        }
 
         private void bSpeak_Click(object sender, EventArgs e)
         {
@@ -39,11 +52,7 @@ namespace TextToSpeech
             synthesizer.SelectVoice(langs.SelectedItem.ToString());
             synthesizer.Rate = speedSlider.Value;
 
-            string toSpeak = "";
-            if (inputArea.SelectedText.Length > 0)
-                toSpeak = inputArea.SelectedText;
-            else
-                toSpeak = inputArea.Text;
+            string toSpeak = getTxt();
             if (toSpeak.Length <= 0)
             {
                 MessageBox.Show("You need write some text...", "No text", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,6 +63,7 @@ namespace TextToSpeech
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            wFind = new FindReplace(this);
             this.loadLang(Properties.Settings.Default.Lang);
 
             synthesizer = new SpeechSynthesizer();
@@ -66,10 +76,7 @@ namespace TextToSpeech
             }
         }
 
-        private void speedSlider_Scroll(object sender, EventArgs e)
-        {
-            speedLabel.Text = speedSlider.Value.ToString();
-        }
+        private void speedSlider_Scroll(object sender, EventArgs e) => speedLabel.Text = speedSlider.Value.ToString();
 
         private void cancelSpeechToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -135,15 +142,8 @@ namespace TextToSpeech
             }
         }
 
-        private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            saveInputArea(true);
-        }
-
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            saveInputArea(false);
-        }
+        private void saveFileToolStripMenuItem_Click(object sender, EventArgs e) => saveInputArea(true);
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) => saveInputArea(false);
 
         private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -158,7 +158,7 @@ namespace TextToSpeech
             }
             inputArea.LoadFile(path, RichTextBoxStreamType.PlainText);
         }
-        private void loadLang(string lang)
+        public void loadLang(string lang)
         {
             rm = new ResourceManager("TextToSpeech.langs."+lang+"_local", Assembly.GetExecutingAssembly());
 
@@ -174,11 +174,16 @@ namespace TextToSpeech
             transparencyToolStripMenuItem.Text = rm.GetString("Trans");
             settingsToolStripMenuItem.Text = rm.GetString("Settings");
             arkivToolStripMenuItem.Text = rm.GetString("File");
-            fontToolStripMenuItem.Text = rm.GetString("Font");
+            fontToolStripMenuItem.Text = rm.GetString("Edit");
+            fontToolStripMenuItem1.Text = rm.GetString("Font");
+            findToolStripMenuItem.Text = rm.GetString("Find");
+            replaceToolStripMenuItem.Text = rm.GetString("Replace");
             languageToolStripMenuItem.Text = rm.GetString("Lang");
+            wFind.loadLang(rm);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.LastText = inputArea.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -248,7 +253,7 @@ namespace TextToSpeech
             this.loadLang(Properties.Settings.Default.Lang);
         }
 
-        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             fontDialog1 = new FontDialog();
             fontDialog1.ShowColor = false;
@@ -259,6 +264,38 @@ namespace TextToSpeech
             if (fontDialog1.ShowDialog() != DialogResult.Cancel)
             {
                 inputArea.Font = fontDialog1.Font;
+            }
+        }
+        public void replace(string key, string with, bool matchCase)
+        {
+            if (matchCase)
+                inputArea.Text = inputArea.Text.Replace(key, with);
+            else
+                inputArea.Text = Regex.Replace(inputArea.Text, key.ToLower(), with, RegexOptions.IgnoreCase);
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wFind.switchToTab(0);
+            wFind.TrueShow();
+        }
+
+        private void replaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wFind.switchToTab(1);
+            wFind.TrueShow();
+        }
+
+        private void inputArea_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                saveInputArea(true);
+            }
+            else if (e.Control && e.KeyCode == Keys.F)
+            {
+                wFind.switchToTab(0);
+                wFind.TrueShow();
             }
         }
     }

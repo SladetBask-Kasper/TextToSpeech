@@ -70,11 +70,29 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        internal static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
         internal static string File {
             get {
                 return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find.
+        /// </summary>
+        internal static string Find {
+            get {
+                return ResourceManager.GetString("Find", resourceCulture);
             }
         }
         
@@ -97,11 +115,29 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Keyword.
+        /// </summary>
+        internal static string Keyword {
+            get {
+                return ResourceManager.GetString("Keyword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
         internal static string Lang {
             get {
                 return ResourceManager.GetString("Lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Match Case.
+        /// </summary>
+        internal static string MatchC {
+            get {
+                return ResourceManager.GetString("MatchC", resourceCulture);
             }
         }
         
@@ -129,6 +165,24 @@ namespace TextToSpeech.langs {
         internal static string OpenFile {
             get {
                 return ResourceManager.GetString("OpenFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace.
+        /// </summary>
+        internal static string Replace {
+            get {
+                return ResourceManager.GetString("Replace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace With.
+        /// </summary>
+        internal static string ReplaceWith {
+            get {
+                return ResourceManager.GetString("ReplaceWith", resourceCulture);
             }
         }
         

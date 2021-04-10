@@ -34,5 +34,17 @@ namespace TextToSpeech.Properties {
                 this["Lang"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastText {
+            get {
+                return ((string)(this["LastText"]));
+            }
+            set {
+                this["LastText"] = value;
+            }
+        }
     }
 }

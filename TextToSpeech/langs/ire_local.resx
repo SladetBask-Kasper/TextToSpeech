@@ -120,8 +120,14 @@
   <data name="CancelSpeech" xml:space="preserve">
     <value>Cealaigh cainte</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Eagrán</value>
+  </data>
   <data name="File" xml:space="preserve">
     <value>Comhad</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Faigh amach</value>
   </data>
   <data name="Font" xml:space="preserve">
     <value>Cló</value>
@@ -129,8 +135,14 @@
   <data name="Form1_txt" xml:space="preserve">
     <value>Téacs go óráid</value>
   </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Eochairfhocal</value>
+  </data>
   <data name="Lang" xml:space="preserve">
     <value>Teanga</value>
+  </data>
+  <data name="MatchC" xml:space="preserve">
+    <value>Cás íogair</value>
   </data>
   <data name="NewFile" xml:space="preserve">
     <value>Comhad nua</value>
@@ -140,6 +152,12 @@
   </data>
   <data name="OpenFile" xml:space="preserve">
     <value>Comhad a oscailt</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Cuir in ionad</value>
+  </data>
+  <data name="ReplaceWith" xml:space="preserve">
+    <value>Cuir in ionad é</value>
   </data>
   <data name="SaveAs" xml:space="preserve">
     <value>Sábháil mar</value>

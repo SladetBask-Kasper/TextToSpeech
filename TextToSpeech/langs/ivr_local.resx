@@ -120,8 +120,14 @@
   <data name="CancelSpeech" xml:space="preserve">
     <value>ביטול דיבור</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>לַעֲרוֹך</value>
+  </data>
   <data name="File" xml:space="preserve">
     <value>קוֹבֶץ</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>למצוא</value>
   </data>
   <data name="Font" xml:space="preserve">
     <value>גוֹפָן</value>
@@ -129,8 +135,14 @@
   <data name="Form1_txt" xml:space="preserve">
     <value>טקסט לדיבור</value>
   </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>מילת מפתח</value>
+  </data>
   <data name="Lang" xml:space="preserve">
     <value>שפה</value>
+  </data>
+  <data name="MatchC" xml:space="preserve">
+    <value>מקרה רגיש</value>
   </data>
   <data name="NewFile" xml:space="preserve">
     <value>קובץ חדש</value>
@@ -140,6 +152,12 @@
   </data>
   <data name="OpenFile" xml:space="preserve">
     <value>תיק פתוח</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>החלף</value>
+  </data>
+  <data name="ReplaceWith" xml:space="preserve">
+    <value>להחליף ב</value>
   </data>
   <data name="SaveAs" xml:space="preserve">
     <value>שמור כ</value>

@@ -120,8 +120,14 @@
   <data name="CancelSpeech" xml:space="preserve">
     <value>Hủy lời nói</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Biên tập</value>
+  </data>
   <data name="File" xml:space="preserve">
     <value>Tập tin</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Tìm thấy</value>
   </data>
   <data name="Font" xml:space="preserve">
     <value>Nét chữ</value>
@@ -129,8 +135,14 @@
   <data name="Form1_txt" xml:space="preserve">
     <value>Chuyển văn bản thành giọng nói</value>
   </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Từ khóa</value>
+  </data>
   <data name="Lang" xml:space="preserve">
     <value>Ngôn ngữ</value>
+  </data>
+  <data name="MatchC" xml:space="preserve">
+    <value>Trường hợp nhạy cảm</value>
   </data>
   <data name="NewFile" xml:space="preserve">
     <value>tập tin mới</value>
@@ -140,6 +152,12 @@
   </data>
   <data name="OpenFile" xml:space="preserve">
     <value>Mở tệp</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Thay thế</value>
+  </data>
+  <data name="ReplaceWith" xml:space="preserve">
+    <value>Thay bằng</value>
   </data>
   <data name="SaveAs" xml:space="preserve">
     <value>Lưu thành</value>

@@ -120,8 +120,14 @@
   <data name="CancelSpeech" xml:space="preserve">
     <value>Откажи говор</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Уредити</value>
+  </data>
   <data name="File" xml:space="preserve">
     <value>Филе</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Пронаћи</value>
   </data>
   <data name="Font" xml:space="preserve">
     <value>Фонт</value>
@@ -129,8 +135,14 @@
   <data name="Form1_txt" xml:space="preserve">
     <value>Текст у говор</value>
   </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Кључна реч</value>
+  </data>
   <data name="Lang" xml:space="preserve">
     <value>Језик</value>
+  </data>
+  <data name="MatchC" xml:space="preserve">
+    <value>Велика и мала слова</value>
   </data>
   <data name="NewFile" xml:space="preserve">
     <value>Нова датотека</value>
@@ -140,6 +152,12 @@
   </data>
   <data name="OpenFile" xml:space="preserve">
     <value>Отворен филе</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Заменити</value>
+  </data>
+  <data name="ReplaceWith" xml:space="preserve">
+    <value>Заменити са</value>
   </data>
   <data name="SaveAs" xml:space="preserve">
     <value>Сачувај као</value>
