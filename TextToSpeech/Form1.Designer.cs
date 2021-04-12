@@ -67,11 +67,13 @@ namespace TextToSpeech
             this.suomalainenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.հայերենToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.српскиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshLangListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.replaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelSpeechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.českýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -171,28 +173,28 @@ namespace TextToSpeech
             // newFileToolStripMenuItem
             // 
             this.newFileToolStripMenuItem.Name = "newFileToolStripMenuItem";
-            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.newFileToolStripMenuItem.Text = "New File";
             this.newFileToolStripMenuItem.Click += new System.EventHandler(this.newFileToolStripMenuItem_Click);
             // 
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.openFileToolStripMenuItem.Text = "Open File";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
             // saveFileToolStripMenuItem
             // 
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.saveFileToolStripMenuItem.Text = "Save";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -201,7 +203,8 @@ namespace TextToSpeech
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alwaysOnTopToolStripMenuItem,
             this.transparencyToolStripMenuItem,
-            this.languageToolStripMenuItem});
+            this.languageToolStripMenuItem,
+            this.refreshLangListToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
@@ -209,7 +212,7 @@ namespace TextToSpeech
             // alwaysOnTopToolStripMenuItem
             // 
             this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alwaysOnTopToolStripMenuItem.Text = "Always on top";
             this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
             // 
@@ -227,7 +230,7 @@ namespace TextToSpeech
             this.toolStripMenuItem10,
             this.toolStripMenuItem11});
             this.transparencyToolStripMenuItem.Name = "transparencyToolStripMenuItem";
-            this.transparencyToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.transparencyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.transparencyToolStripMenuItem.Text = "Transparency";
             // 
             // toolStripMenuItem2
@@ -313,87 +316,95 @@ namespace TextToSpeech
             this.araToolStripMenuItem,
             this.suomalainenToolStripMenuItem,
             this.հայերենToolStripMenuItem,
-            this.српскиToolStripMenuItem});
+            this.српскиToolStripMenuItem,
+            this.českýToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.languageToolStripMenuItem.Text = "Language";
             // 
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // swedishToolStripMenuItem
             // 
             this.swedishToolStripMenuItem.Name = "swedishToolStripMenuItem";
-            this.swedishToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.swedishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.swedishToolStripMenuItem.Text = "Svenska";
             this.swedishToolStripMenuItem.Click += new System.EventHandler(this.swedishToolStripMenuItem_Click);
             // 
             // 中国ToolStripMenuItem
             // 
             this.中国ToolStripMenuItem.Name = "中国ToolStripMenuItem";
-            this.中国ToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.中国ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.中国ToolStripMenuItem.Text = "中国";
             this.中国ToolStripMenuItem.Click += new System.EventHandler(this.中国ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "Gaeilge (Éireann)";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem12.Text = "עברית";
             this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem13.Text = "Deutsche";
             this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
             // 
             // tiếngViệtToolStripMenuItem
             // 
             this.tiếngViệtToolStripMenuItem.Name = "tiếngViệtToolStripMenuItem";
-            this.tiếngViệtToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.tiếngViệtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiếngViệtToolStripMenuItem.Text = "Tiếng Việt";
             this.tiếngViệtToolStripMenuItem.Click += new System.EventHandler(this.tiếngViệtToolStripMenuItem_Click);
             // 
             // araToolStripMenuItem
             // 
             this.araToolStripMenuItem.Name = "araToolStripMenuItem";
-            this.araToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.araToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.araToolStripMenuItem.Text = "العربية";
             this.araToolStripMenuItem.Click += new System.EventHandler(this.araToolStripMenuItem_Click);
             // 
             // suomalainenToolStripMenuItem
             // 
             this.suomalainenToolStripMenuItem.Name = "suomalainenToolStripMenuItem";
-            this.suomalainenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.suomalainenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.suomalainenToolStripMenuItem.Text = "Suomalainen";
             this.suomalainenToolStripMenuItem.Click += new System.EventHandler(this.suomalainenToolStripMenuItem_Click);
             // 
             // հայերենToolStripMenuItem
             // 
             this.հայերենToolStripMenuItem.Name = "հայերենToolStripMenuItem";
-            this.հայերենToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.հայերենToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.հայերենToolStripMenuItem.Text = "հայերեն";
             this.հայերենToolStripMenuItem.Click += new System.EventHandler(this.հայերենToolStripMenuItem_Click);
             // 
             // српскиToolStripMenuItem
             // 
             this.српскиToolStripMenuItem.Name = "српскиToolStripMenuItem";
-            this.српскиToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.српскиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.српскиToolStripMenuItem.Text = "Српски";
             this.српскиToolStripMenuItem.Click += new System.EventHandler(this.српскиToolStripMenuItem_Click);
+            // 
+            // refreshLangListToolStripMenuItem
+            // 
+            this.refreshLangListToolStripMenuItem.Name = "refreshLangListToolStripMenuItem";
+            this.refreshLangListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshLangListToolStripMenuItem.Text = "Refresh Lang List";
+            this.refreshLangListToolStripMenuItem.Click += new System.EventHandler(this.refreshLangListToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
@@ -432,6 +443,13 @@ namespace TextToSpeech
             this.cancelSpeechToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.cancelSpeechToolStripMenuItem.Text = "Cancel Speech";
             this.cancelSpeechToolStripMenuItem.Click += new System.EventHandler(this.cancelSpeechToolStripMenuItem_Click);
+            // 
+            // českýToolStripMenuItem
+            // 
+            this.českýToolStripMenuItem.Name = "českýToolStripMenuItem";
+            this.českýToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.českýToolStripMenuItem.Text = "Český";
+            this.českýToolStripMenuItem.Click += new System.EventHandler(this.českýToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -503,6 +521,8 @@ namespace TextToSpeech
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem replaceToolStripMenuItem;
         public System.Windows.Forms.RichTextBox inputArea;
+        private System.Windows.Forms.ToolStripMenuItem refreshLangListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem českýToolStripMenuItem;
     }
 }
 

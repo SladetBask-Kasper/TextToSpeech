@@ -169,6 +169,15 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تحديث الأصوات.
+        /// </summary>
+        internal static string refreshLang {
+            get {
+                return ResourceManager.GetString("refreshLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to يستبدل.
         /// </summary>
         internal static string Replace {

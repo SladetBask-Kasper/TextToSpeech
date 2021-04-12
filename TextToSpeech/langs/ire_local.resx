@@ -153,6 +153,9 @@
   <data name="OpenFile" xml:space="preserve">
     <value>Comhad a oscailt</value>
   </data>
+  <data name="refreshLang" xml:space="preserve">
+    <value>Nuashonraigh guthanna</value>
+  </data>
   <data name="Replace" xml:space="preserve">
     <value>Cuir in ionad</value>
   </data>

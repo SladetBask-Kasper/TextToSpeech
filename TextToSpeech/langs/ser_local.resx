@@ -153,6 +153,9 @@
   <data name="OpenFile" xml:space="preserve">
     <value>Отворен филе</value>
   </data>
+  <data name="refreshLang" xml:space="preserve">
+    <value>Ажурирајте гласове</value>
+  </data>
   <data name="Replace" xml:space="preserve">
     <value>Заменити</value>
   </data>

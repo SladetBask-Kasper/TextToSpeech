@@ -169,6 +169,15 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nuashonraigh guthanna.
+        /// </summary>
+        internal static string refreshLang {
+            get {
+                return ResourceManager.GetString("refreshLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cuir in ionad.
         /// </summary>
         internal static string Replace {

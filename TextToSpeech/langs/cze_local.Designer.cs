@@ -22,14 +22,14 @@ namespace TextToSpeech.langs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class vie_local {
+    internal class cze_local {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal vie_local() {
+        internal cze_local() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace TextToSpeech.langs {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TextToSpeech.langs.vie_local", typeof(vie_local).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TextToSpeech.langs.cze_local", typeof(cze_local).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hủy lời nói.
+        ///   Looks up a localized string similar to Zrušit řeč.
         /// </summary>
         internal static string CancelSpeech {
             get {
@@ -70,7 +70,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Biên tập.
+        ///   Looks up a localized string similar to Upravit.
         /// </summary>
         internal static string Edit {
             get {
@@ -79,7 +79,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tập tin.
+        ///   Looks up a localized string similar to Soubor.
         /// </summary>
         internal static string File {
             get {
@@ -88,7 +88,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tìm thấy.
+        ///   Looks up a localized string similar to Nalézt.
         /// </summary>
         internal static string Find {
             get {
@@ -97,7 +97,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nét chữ.
+        ///   Looks up a localized string similar to Font.
         /// </summary>
         internal static string Font {
             get {
@@ -106,7 +106,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chuyển văn bản thành giọng nói.
+        ///   Looks up a localized string similar to Text na řeč.
         /// </summary>
         internal static string Form1_txt {
             get {
@@ -115,7 +115,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Từ khóa.
+        ///   Looks up a localized string similar to Klíčové slovo.
         /// </summary>
         internal static string Keyword {
             get {
@@ -124,7 +124,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ngôn ngữ.
+        ///   Looks up a localized string similar to Jazyk.
         /// </summary>
         internal static string Lang {
             get {
@@ -133,7 +133,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trường hợp nhạy cảm.
+        ///   Looks up a localized string similar to Citlivý na velká písmena.
         /// </summary>
         internal static string MatchC {
             get {
@@ -142,7 +142,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to tập tin mới.
+        ///   Looks up a localized string similar to Nový soubor.
         /// </summary>
         internal static string NewFile {
             get {
@@ -151,7 +151,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Luôn luôn trên đầu trang.
+        ///   Looks up a localized string similar to Vždy na vrcholu.
         /// </summary>
         internal static string OnTop_txt {
             get {
@@ -160,7 +160,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mở tệp.
+        ///   Looks up a localized string similar to Otevřít soubor.
         /// </summary>
         internal static string OpenFile {
             get {
@@ -169,7 +169,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cập nhật giọng nói.
+        ///   Looks up a localized string similar to Aktualizovat hlasy.
         /// </summary>
         internal static string refreshLang {
             get {
@@ -178,7 +178,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thay thế.
+        ///   Looks up a localized string similar to Nahradit.
         /// </summary>
         internal static string Replace {
             get {
@@ -187,7 +187,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thay bằng.
+        ///   Looks up a localized string similar to Nahradit se.
         /// </summary>
         internal static string ReplaceWith {
             get {
@@ -196,7 +196,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lưu thành.
+        ///   Looks up a localized string similar to Uložit jako.
         /// </summary>
         internal static string SaveAs {
             get {
@@ -205,7 +205,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiết kiệm.
+        ///   Looks up a localized string similar to Uložit.
         /// </summary>
         internal static string SaveFile {
             get {
@@ -214,7 +214,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cài đặt.
+        ///   Looks up a localized string similar to Nastavení.
         /// </summary>
         internal static string Settings {
             get {
@@ -223,7 +223,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nói.
+        ///   Looks up a localized string similar to Mluvit.
         /// </summary>
         internal static string Speak_txt {
             get {
@@ -232,7 +232,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tốc độ.
+        ///   Looks up a localized string similar to Rychlost.
         /// </summary>
         internal static string SpeedLabel_txt {
             get {
@@ -241,7 +241,7 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minh bạch.
+        ///   Looks up a localized string similar to Průhlednost.
         /// </summary>
         internal static string Trans {
             get {

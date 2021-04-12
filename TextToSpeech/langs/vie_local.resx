@@ -153,6 +153,9 @@
   <data name="OpenFile" xml:space="preserve">
     <value>Mở tệp</value>
   </data>
+  <data name="refreshLang" xml:space="preserve">
+    <value>Cập nhật giọng nói</value>
+  </data>
   <data name="Replace" xml:space="preserve">
     <value>Thay thế</value>
   </data>

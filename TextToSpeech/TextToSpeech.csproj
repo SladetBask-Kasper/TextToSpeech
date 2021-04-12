@@ -150,6 +150,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>arm_local.resx</DependentUpon>
     </Compile>
+    <Compile Include="langs\cze_local.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cze_local.resx</DependentUpon>
+    </Compile>
     <Compile Include="langs\eng_local.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +218,10 @@
     <EmbeddedResource Include="langs\arm_local.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>arm_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs\cze_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cze_local.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="langs\eng_local.resx">
       <Generator>ResXFileCodeGenerator</Generator>

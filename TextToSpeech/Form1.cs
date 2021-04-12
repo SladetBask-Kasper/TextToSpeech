@@ -61,19 +61,25 @@ namespace TextToSpeech
             synthesizer.SpeakAsync(toSpeak);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        protected void addLangs()
         {
-            wFind = new FindReplace(this);
-            this.loadLang(Properties.Settings.Default.Lang);
-
-            synthesizer = new SpeechSynthesizer();
-            synthesizer.SetOutputToDefaultAudioDevice();
-            synthesizer.Volume = 100;
             foreach (var voice in synthesizer.GetInstalledVoices())
             {
                 var info = voice.VoiceInfo;
                 langs.Items.Add(info.Name);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            wFind = new FindReplace(this);
+            this.loadLang(Properties.Settings.Default.Lang);
+            inputArea.Text = Properties.Settings.Default.LastText;
+
+            synthesizer = new SpeechSynthesizer();
+            synthesizer.SetOutputToDefaultAudioDevice();
+            synthesizer.Volume = 100;
+            addLangs();
         }
 
         private void speedSlider_Scroll(object sender, EventArgs e) => speedLabel.Text = speedSlider.Value.ToString();
@@ -108,11 +114,13 @@ namespace TextToSpeech
 
         private void saveInputArea(bool reUse)
         {
+            if (inputArea.Text.ElementAt(inputArea.Text.Length - 1) != '\n')
+                inputArea.Text += "\n";
             if (reUse == true)
             {
                 if (path.Length > 0)
                 {
-                    inputArea.SaveFile(path, RichTextBoxStreamType.PlainText);
+                    inputArea.SaveFile(path, RichTextBoxStreamType.UnicodePlainText);
                 }
                 else
                 {
@@ -135,7 +143,7 @@ namespace TextToSpeech
                     switch (saveFileDialog1.FilterIndex)
                     {
                         case 1:
-                            inputArea.SaveFile(path, RichTextBoxStreamType.PlainText);
+                            inputArea.SaveFile(path, RichTextBoxStreamType.UnicodePlainText);
                             break;
                     }
                 }
@@ -156,7 +164,7 @@ namespace TextToSpeech
                     path = openFileDialog.FileName;
                 }
             }
-            inputArea.LoadFile(path, RichTextBoxStreamType.PlainText);
+            inputArea.LoadFile(path, RichTextBoxStreamType.UnicodePlainText);
         }
         public void loadLang(string lang)
         {
@@ -179,6 +187,7 @@ namespace TextToSpeech
             findToolStripMenuItem.Text = rm.GetString("Find");
             replaceToolStripMenuItem.Text = rm.GetString("Replace");
             languageToolStripMenuItem.Text = rm.GetString("Lang");
+            refreshLangListToolStripMenuItem.Text = rm.GetString("refreshLang"); // Was originally with big R
             wFind.loadLang(rm);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -252,6 +261,11 @@ namespace TextToSpeech
             Properties.Settings.Default.Lang = "ser";
             this.loadLang(Properties.Settings.Default.Lang);
         }
+        private void českýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Lang = "cze";
+            this.loadLang(Properties.Settings.Default.Lang);
+        }
 
         private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -298,5 +312,13 @@ namespace TextToSpeech
                 wFind.TrueShow();
             }
         }
+
+        private void refreshLangListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            langs.Items.Clear();
+            addLangs();
+        }
+
+        
     }
 }

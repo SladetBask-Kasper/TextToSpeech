@@ -153,6 +153,9 @@
   <data name="OpenFile" xml:space="preserve">
     <value>Datei öffnen</value>
   </data>
+  <data name="refreshLang" xml:space="preserve">
+    <value>Voices aktualisieren</value>
+  </data>
   <data name="Replace" xml:space="preserve">
     <value>Ersetzen</value>
   </data>

@@ -153,6 +153,9 @@
   <data name="OpenFile" xml:space="preserve">
     <value>Avaa tiedosto</value>
   </data>
+  <data name="refreshLang" xml:space="preserve">
+    <value>Päivitä äänet</value>
+  </data>
   <data name="Replace" xml:space="preserve">
     <value>Korvata</value>
   </data>

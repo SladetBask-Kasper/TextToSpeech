@@ -169,6 +169,15 @@ namespace TextToSpeech.langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Päivitä äänet.
+        /// </summary>
+        internal static string refreshLang {
+            get {
+                return ResourceManager.GetString("refreshLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Korvata.
         /// </summary>
         internal static string Replace {
